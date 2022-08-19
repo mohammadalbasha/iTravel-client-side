@@ -1,0 +1,95 @@
+@import '../../index.scss';
+.aboutUs {
+  height: 100vh; //media query here
+  background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+    url(../../images/aboutus.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  &__head {
+    &__title {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      &__stick {
+        width: 0.5rem;
+        height: 10rem;
+        background-color: var(--color-primary-dark);
+      }
+
+      &__header {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-size: 3rem;
+        text-transform: uppercase;
+        color: var(--color-white);
+        margin-left: 2rem;
+        font-weight: 900;
+        letter-spacing: 0.3rem;
+      }
+    }
+    &__paragraph {
+      width: 40rem;
+      font-size: 1.5rem;
+      color: var(--color-grey-light-3);
+      @media only screen and (max-width: $bp-medium) {
+        width: 20rem;
+      }
+    }
+  }
+
+  &__body {
+    &__header {
+      color: var(--color-primary-dark);
+      font-size: 2rem;
+      font-weight: 900;
+      font-family: Georgia, "Times New Roman", Times, serif;
+      letter-spacing: 0.15rem;
+    }
+    &__list {
+      list-style: none;
+      &__item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 2rem;
+        @media only screen and (max-width: $bp-medium) {
+          margin-top: 1.5rem;
+        }
+        &__icon {
+          color: var(--color-primary-dark);
+          width: 6rem;
+          height: 6rem;
+          @media only screen and (max-width: $bp-medium) {
+            width: 4rem;
+            height: 4rem;
+          }
+          margin-right: 1.5rem;
+          fill: currentColor;
+          &:hover {
+            color: var(--color-primary);
+          }
+        }
+        &__content {
+          margin-left: 1.5rem;
+          &__header {
+            margin-bottom: 0.5rem;
+            color: var(--color-white);
+            font-weight: 700;
+            font-size: 1.6rem;
+            font-family: Georgia, "Times New Roman", Times, serif;
+            letter-spacing: 0.15rem;
+          }
+          &__paragraph {
+            width: 25rem;
+            color: var(--color-grey-light-3);
+          }
+        }
+      }
+    }
+  }
+}

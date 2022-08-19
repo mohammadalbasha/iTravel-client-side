@@ -1,0 +1,238 @@
+.nav{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	//height: 100vh;
+	&__btn{
+		border: none;
+		background-color: transparent;
+		cursor: pointer;
+		color: var(--color-primary-dark);
+		&:hover{
+			color: var(--color-primary);
+		}
+		&--open{
+			position: fixed;
+			top: 1rem;
+			left: 1rem;
+			font-size: 3.5rem;
+		}
+		&--close{
+			opacity: 0.3;
+			position: absolute;
+			top: 3.5rem;
+			right: 3rem;
+			font-size: 2.5rem;
+		}
+	}
+
+
+	&__slider{
+		position:fixed;
+		top: 0;
+		left: 0;
+		height: 100vh;
+		transform: translateX(-100%);
+		transition: transform 0.3s ease-in-out;
+		z-index: 100;
+		/*
+		&__header{
+			width: 20rem;
+			letter-spacing: 2px;
+			border-bottom: 2px solid var(--color-primary);
+			font-size: 2rem;
+			margin-bottom: 1rem;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+
+			&__logo--green{
+				height: 5rem;
+			}
+		}
+		*/
+		&--black{
+			background-color: var(--color-grey-dark-1);
+			//width: 40%;
+			max-width: 48rem;
+			min-width: 32rem;
+			transition-delay: .4s; 
+		}
+		&--black.visible{
+			transition-delay: 0s;
+		}
+
+		&--green{
+			background-color: var(--color-primary);
+			width: 95%;
+			transition-delay: .2s;
+		}
+		&--green.visible{
+			transition-delay: .2s;
+		}
+
+		&--white{
+			background-color: #fff;
+			width: 95%;
+			padding: 2.5rem;
+			position: relative;
+			transition-delay: 0s;
+		}
+		&--white.visible{
+			transition-delay: .4s
+		}
+	}
+	&__slider.visible{
+		transform: translate(0);
+	}
+	&__list{
+		list-style-type: none;
+		padding: 0;
+		height: 70vh;
+		overflow: overlay; //Behaves the same as auto, but with the scrollbars drawn on top of content instead of taking up space. 
+		-ms-overflow-style: none;  /* IE and Edge */
+  		scrollbar-width: none;  /* Firefox */
+
+		&::-webkit-scrollbar { // to hide the scrollbar for chrome, safari, and safari
+ 	 		display: none;
+		}
+
+		&__item{
+			margin: 1.8rem 0;
+			position: relative;
+			&--hidden{
+				visibility: hidden;
+				display: none;
+			}
+			&__link{
+				color: var(--color-grey-dark-1);
+				font-size: 1.5rem;
+				text-decoration: none;
+				text-transform: uppercase;
+				display: flex;
+				align-items: center;
+				border-bottom: 1px solid var(--color-grey-light-4);
+				&:hover{
+					color: var(--color-primary-dark);
+				}
+				&--active{ //current page
+					color: var(--color-primary-dark);
+				}
+
+				&--sub{
+					&--active{
+						&--first{
+							border-bottom: 1px solid var(--color-primary-light);
+						}
+						&--second{
+							border-bottom: 1px solid var(--color-primary-light);
+						}
+					}
+				}
+			}
+
+			&::before { // we use it for the hovering animation
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			height: 10%;
+			width: 0px;
+			background-color: var(--color-primary);
+			transform: scaleY(0); // first the element is hidden 
+			transform-origin: bottom; //the starting point of the transform
+			transition: transform .2s, //different animations with differnet timing functions
+						width .4s cubic-bezier(1,0,0,1) .2s,//.2s is the delay
+						background-color .1s;
+			}
+
+			&:hover::before,
+			&--active::before{
+				transform: scaleY(1); // when hovering it expands in the y direction
+				width: 100%; // it increases in width to fill the whole width of the element
+				
+			}
+
+			&:active::before{
+				background-color: var(--color-primary-light);
+			}
+
+			&--sub{
+				&--first{
+					&::before{
+					background-color: transparent;
+					}
+					&:active::before{
+						background-color: transparent;
+					}
+				}
+				&--second{
+					&::before{
+					background-color: transparent;
+					}
+					&:active::before{
+						background-color: transparent;
+					}
+				}
+			}
+
+			&__icon{
+				color: var(--color-grey-dark-1);
+				width: 1.75rem;
+				height: 1.75rem;
+				margin-right: 1.5rem;
+				fill: currentColor;
+				&--dropdown{
+					&--first{
+						position: absolute;
+						right: 0;
+						margin-right: 0;
+						width: 2.5rem;
+						height: 2.5rem;
+					}
+					&--second{
+						position: absolute;
+						right: 0;
+						margin-right: 0;
+						width: 2.5rem;
+						height: 2.5rem;
+					}
+					&--rotated{
+						transform: rotate(90deg);
+						
+					}
+
+				}
+				&:hover{
+					color: var(--color-primary-dark);
+				}
+				&--active{
+					color: var(--color-primary-dark);
+				}
+			}
+		}
+	}
+	&__sub-list{
+		&--first{
+			list-style-type: none;
+			padding-left: 2rem;
+			display: none;
+		}
+		&--second{
+			list-style-type: none;
+			padding-left: 2rem;
+			display: none;
+		}
+	}
+	&__legal {
+	    font-size: 1.2rem;
+	    color: var(--color-grey-dark-1);
+	    text-align: center;
+	    position: absolute;
+	    top: 92%;
+	    padding-left:1.5rem;
+	    padding-right: 5.5rem;
+	}
+}

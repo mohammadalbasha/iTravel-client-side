@@ -1,0 +1,182 @@
+.logoWithHeader {
+  font-family: "Macondo", cursive;
+  font-weight: 600;
+  width: 20rem;
+  letter-spacing: 3.5px;
+  border-bottom: 2px solid var(--color-primary-dark);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  padding-right: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  &--signup {
+    width: 30rem;
+    letter-spacing: 7px;
+    font-size: 3rem;
+    padding-right: 3.5rem;
+  }
+  &--mainHeader {
+    margin-left: 10rem;
+    margin-bottom: 0;
+    align-items: flex-end;
+    color: var(--color-white);
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  &__image {
+    height: 5rem;
+    &--signup {
+      height: 6rem;
+    }
+    &--mainHeader {
+      height: 3.5rem;
+    }
+  }
+}
+
+.btn {
+  &:link,
+  &:visited {
+    text-decoration: none;
+    transition: all 0.5s ease;
+  }
+  &:hover,
+  &:active {
+    background-color: var(--color-primary);
+    color: #fff;
+    transition: all 0.5s ease;
+  }
+  &:focus {
+    outline: none;
+  }
+  &:disabled {
+    background-color: var(--color-primary-dark);
+    opacity: 0.5;
+  }
+
+  &__launcher {
+    &:link,
+    &:visited {
+      display: inline-block;
+      padding: 1rem 3rem;
+      border-radius: 20rem;
+      border: 1px solid var(--color-primary-dark);
+    }
+    &:hover,
+    &:active,
+    &:focus {
+      border: 1px solid var(--color-primary); /*we add this one here to make the two buttons look exactly the same size*/
+      background-color: var(--color-primary);
+    }
+    &--myAccount {
+      font-size: 1.2rem;
+      margin-right: 1.5rem;
+    }
+    &--country {
+      font-size: 1.2rem;
+    }
+    &--download {
+      font-size: 1.2rem;
+      margin-top: 2rem;
+    }
+    &--solid {
+      &:link,
+      &:visited {
+        background-color: var(--color-primary-dark);
+        color: #fff;
+        margin-right: 1.5rem;
+      }
+
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: var(
+          --color-primary
+        ); // we need to rewrite this here because we wrote background color once again in --solid:link
+      }
+    }
+
+    &--empty {
+      &:link,
+      &:visited {
+        color: var(--color-primary-dark);
+      }
+
+      &:hover,
+      &:active,
+      &:focus {
+        color: #fff;
+      }
+    }
+  }
+  &--sticky {
+    position: fixed;
+    bottom: 2rem;
+    right: 4rem;
+    height: 7rem;
+    width: 7rem;
+    text-align: center;
+    background-color: var(--color-primary);
+    border-radius: 50%;
+    border: 1px solid var(--color-primary-dark);
+    z-index: 1000;
+    &__icon {
+      color: #fff;
+      width: 6rem;
+      height: 6rem;
+      fill: currentColor;
+      margin-top: 0.4rem;
+    }
+  }
+  &__hero {
+    font-size: 1.6rem;
+    border: none;
+    padding: 0.4rem 2rem;
+    border-radius: 10rem;
+    color: #fff;
+    &--login {
+      width: 11.3rem;
+      padding: 1rem 2rem;
+      margin-top: 1rem;
+    }
+    &--launcher {
+      font-size: 1.5rem;
+      padding: 1.2rem 3rem;
+      border-radius: 20rem;
+      margin-right: 1.5rem;
+      border: 1px solid var(--color-primary);
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: var(
+          --color-primary-dark
+        ); // we need to rewrite this here because we wrote background color once again in --solid:link
+        border: 1px solid var(--color-primary-dark);
+      }
+    }
+    &--submit,
+    &--launcher {
+      width: 11.3rem;
+      padding: 1rem 2rem;
+      background-color: var(--color-primary);
+      &:focus {
+        background-color: var(--color-primary-dark);
+      }
+    }
+    &--cancel {
+      background-color: var(--color-grey-dark-4);
+      border: 1px solid var(--color-secondary);
+      color: var(--color-grey-dark-1);
+      &:focus,
+      &:hover {
+        background-color: var(--color-secondary);
+      }
+    }
+    &--edit-settings {
+      margin-right: 1rem;
+    }
+  }
+}

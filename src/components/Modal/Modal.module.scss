@@ -1,0 +1,21 @@
+
+  .modal {
+    position: absolute;
+    width: 60vw;
+    margin-left: 20vw;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+
+  }
+
+  .close__modal__btn {
+    align-self: flex-start;
+    border: none;
+          background-color: transparent;
+          cursor: pointer;
+          color: var(--color-primary-dark);
+          &:hover{
+              color: var(--color-primary);
+          }
+  }

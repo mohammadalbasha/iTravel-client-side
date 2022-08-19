@@ -1,0 +1,99 @@
+@import '../../../index.scss';
+.howItWorks {
+  //position: absolute;
+  //top: 100vh;
+  font-size: 1.7rem;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color-grey-light-3);
+  padding-top: 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__header {
+    font-size: 3rem;
+    border-bottom: 2px solid var(--color-primary-dark);
+    padding-bottom: 1rem;
+    color: var(---primary-dark);
+  }
+
+  &__content {
+    &__group {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-top: 5rem;
+
+      &__header {
+        font-size: 3rem;
+        border: 2px solid var(--color-primary-dark);
+        border-radius: 50%;
+        padding: 0.5rem 2rem;
+        color: var(--color-primary-dark);
+      }
+
+      &__body {
+        padding-left: 2rem;
+        width: 40rem;
+      }
+    }
+  }
+}
+.downloadApp {
+  background-color: var(--color-grey-light-3);
+  font-size: 1.4rem;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__header {
+    font-size: 3rem;
+    @media only screen and (max-width: $bp-medium) {
+      font-size: 2rem;
+    }
+    border-bottom: 2px solid var(--color-primary-dark);
+    padding-bottom: 1rem;
+    color: var(---primary-dark);
+  }
+  &__body {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    &__image {
+      width: 130vh;
+      height: 68vh;
+      margin-right: -15rem;
+    }
+    &__content {
+      margin-right: 20rem;
+      margin-bottom: 2rem;
+      &__group {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 3rem;
+        &__header {
+          font-size: 2rem;
+          border: 1.7px solid var(--color-primary-dark);
+          border-radius: 50%;
+          padding: 0.5rem 1rem;
+          color: var(--color-primary-dark);
+        }
+
+        &__body {
+          padding-left: 2rem;
+          width: 30rem;
+          @media only screen and (max-width: $bp-medium) {
+            width: 25rem;
+          }
+          @media only screen and (max-width: $bp-small) {
+            margin-right: 7rem;
+            width: 22rem;
+          }
+        }
+      }
+    }
+  }
+}

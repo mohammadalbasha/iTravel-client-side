@@ -1,0 +1,112 @@
+@import '../../index.scss';
+.countries {
+  height: 100vh; //media query here
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(../../images/countries.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  @media only screen and (max-width: $bp-small) {
+    height:auto;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 5rem 7rem;
+  }
+  &__header {
+    color: var(--color-primary-dark);
+    font-size: 2rem;
+    font-weight: 900;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    letter-spacing: 0.25rem;
+    margin-bottom: .5rem;
+  }
+  &__head {
+   margin-bottom: 7.6vh;
+    &__flag {
+      width: 15vw;
+      height: 10rem;
+      margin-bottom: 2rem;
+    }
+    
+    &__list {
+      list-style: none;
+      &__item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 2rem;
+        &__icon {
+          color: var(--color-primary-dark);
+          width: 2.6rem;
+          height: 2.6rem;
+          margin-right: 1.5rem;
+          fill: currentColor;
+          &:hover {
+            color: var(--color-primary);
+          }
+        }
+        &__header {
+          //margin-bottom: 0.5rem;
+          color: var(--color-white);
+          font-weight: 700;
+          font-size: 1.5rem;
+          font-family: Georgia, "Times New Roman", Times, serif;
+          letter-spacing: 0.15rem;
+        }
+        &__text {
+          color: var(--color-grey-light-3);
+          font-size: 1.4rem;
+          margin-left: 1rem;
+        }
+      }
+    }
+  }
+  &__body {
+    
+    &__title {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-bottom: 2rem;
+      &__stick {
+        width: 0.5rem;
+        height: 10rem;
+        background-color: var(--color-primary-dark);
+      }
+      &__header {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-size: 3rem;
+        text-transform: uppercase;
+        color: var(--color-white);
+        margin-left: 2rem;
+        font-weight: 900;
+        letter-spacing: 0.3rem;
+      }
+    }
+    &__paragraph {
+      width: 40rem;
+      @media only screen and (max-width: $bp-small) {
+        width: 30rem;
+      }
+      font-size: 1.4rem;
+      color: var(--color-grey-light-3);
+      margin-bottom: 2rem;
+    }
+    &__hint {
+      width: 40rem;
+      @media only screen and (max-width: $bp-small) {
+        width: 30rem;
+      }
+      font-size: 1.2rem;
+      color: var( --color-grey-dark-3);
+      margin-top: 1rem;
+      margin-left: 2rem;
+    }
+  }
+
+  
+}

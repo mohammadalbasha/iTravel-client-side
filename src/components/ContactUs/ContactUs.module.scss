@@ -1,0 +1,130 @@
+@import '../../index.scss';
+.contactUs {
+  height: 100vh; //media query here
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+    url(../../images/contactus.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  &__details {
+    &__group {
+      display: flex;
+      align-items: center;
+      &:not(:first-child) {
+        margin-top: 3rem;
+      }
+    }
+    &__group-text {
+      display: flex;
+      flex-direction: column;
+    }
+    &__header {
+      font-size: 2rem;
+      @media only screen and (max-width: $bp-medium) {
+        font-size: 1.6rem;
+      }
+      font-weight: 600;
+      color: var(--color-white);
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    &__text {
+      font-size: 1.5rem;
+      @media only screen and (max-width: $bp-medium) {
+        font-size: 1.3rem;
+      }
+      color: #fff;
+    }
+    &__icon {
+      color: var(--color-primary-dark);
+      width: 5rem;
+      height: 5rem;
+      @media only screen and (max-width: $bp-medium) {
+        width: 4rem;
+        height: 4rem;
+      }
+      margin-right: 1.5rem;
+      fill: currentColor;
+      &:hover {
+        color: var(--color-primary);
+      }
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    width: 40%;
+    @media only screen and (max-width: 47.875rem) {
+      width: 50%;
+    }
+    @media only screen and (max-width: 37.5rem) {
+      width: 52%;
+    }
+    border-radius: 2rem;
+    &__header {
+      border-bottom: 2px solid var(--color-primary-dark);
+      font-size: 2rem;
+      font-family: "Macondo", cursive;
+      margin-bottom: 1rem;
+      letter-spacing: 2px;
+      text-align: center;
+      width: 20rem;
+      color: #fff;
+      margin-top: 3rem;
+    }
+    &__group {
+      margin-top: 2.3rem;
+      display: flex;
+      align-items: center;
+    }
+    &__label {
+      font-size: 1.5rem;
+      margin-right: 2rem;
+      color: #fff;
+      width: 8rem;
+    }
+    &__input {
+      width: 20rem;
+      color: #fff;
+      background-color: rgba(0, 0, 0, 0.4);
+      outline: none;
+      border: none;
+      padding: 1rem;
+      font-size: 1.4rem;
+      border-radius: 30px;
+      box-shadow: 0 0 0 0.5px var(--color-grey-light-4);
+      transition: box-shadow 0.5s ease;
+      //margin-left: 15rem;
+      &:focus {
+        outline: none;
+        box-shadow: 0 0 0 0.5px var(--color-primary);
+      }
+
+      &:focus:invalid {
+        box-shadow: 0 0 0 0.5px var(--color-secondary);
+      }
+      &--message {
+        min-height: 17rem;
+        max-height: 17rem;
+        min-width: 20rem;
+        max-width: 20rem;
+        border-radius: 20px;
+      }
+    }
+    &__btn {
+      margin: 1.5rem 0;
+      font-size: 1.5rem;
+    }
+    &__request {
+      color: var(--color-primary-dark);
+      margin: 1.5rem 0;
+      font-size: 1.2rem;
+    }
+  }
+}

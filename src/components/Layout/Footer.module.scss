@@ -1,0 +1,13 @@
+.footer {
+    background-image: linear-gradient(to left top, var(--color-layout), var(--color-layout-2));
+    text-align: center;
+    height: 5vh;
+    border-top: 1px solid var(--color-layout-2);
+    &__paragraph {
+        padding-top: .5rem;
+        font-size: 1.1rem;
+        letter-spacing: .15rem;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        color: var(--color-white);
+    }
+}

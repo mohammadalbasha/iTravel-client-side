@@ -1,0 +1,184 @@
+@import '../../index.scss';
+.attractionInfo {
+    //height: 100vh; //media query here
+    display: flex;
+    flex-direction: row;
+    @media only screen and (max-width: $bp-small) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 9rem;
+    padding-right: 4rem;
+  
+    &__title {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-bottom: 2rem;
+      @media only screen and (max-width: $bp-small) {
+        margin-top: 5rem;
+      }
+      &__stick {
+        width: 0.5rem;
+        height: 10rem;
+        background-color: var(--color-primary-dark);
+      }
+      &__header {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-size: 3rem;
+        @media only screen and (max-width: $bp-medium) {
+          font-size: 2rem;
+        }
+        text-transform: uppercase;
+        color: var(--color-grey-dark-2);
+        margin-left: 2rem;
+        font-weight: 900;
+        letter-spacing: 0.3rem;
+      }
+    }
+    &__header {
+      color: var(--color-primary-dark);
+      font-size: 2rem;
+      @media only screen and (max-width: $bp-medium) {
+        font-size: 1.6rem;
+      }
+      font-weight: 900;
+      font-family: Georgia, "Times New Roman", Times, serif;
+      letter-spacing: 0.25rem;
+      margin-bottom: 0.5rem;
+      &--sub {
+        margin-bottom: 2rem;
+        margin-left: 9rem;
+        //margin-top: -5rem;
+      }
+    }
+    &__head {
+      //margin-bottom: 7.6vh;
+      &__list {
+        list-style: none;
+        padding-left: 1.5rem;
+        &__item {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          margin-top: 2rem;
+          &__icon {
+            color: var(--color-primary-dark);
+            width: 2.6rem;
+            height: 2.6rem;
+            @media only screen and (max-width: $bp-medium) {
+              width: 2.2rem;
+              height: 2.2rem;
+            }
+            margin-right: 1.5rem;
+            fill: currentColor;
+            &:hover {
+              color: var(--color-primary);
+            }
+          }
+          &__header {
+            //margin-bottom: 0.5rem;
+            color: var(--color-grey-dark-2);
+            font-weight: 700;
+            font-size: 1.5rem;
+            @media only screen and (max-width: $bp-medium) {
+              font-size: 1.2rem;
+            }
+            font-family: Georgia, "Times New Roman", Times, serif;
+            letter-spacing: 0.15rem;
+          }
+          &__text {
+            color: var(--color-grey-dark-2);
+            font-size: 1.4rem;
+            margin-left: 1rem;
+            @media only screen and (max-width: $bp-medium) {
+              font-size: 1.2rem;
+              width: 11rem;
+            }
+            @media only screen and (max-width: $bp-small) {
+              font-size: 1.2rem;
+              width: auto;
+            }
+          }
+        }
+      }
+    }
+  
+    &__body {
+      margin-top: 13rem;
+      @media only screen and (max-width: $bp-small) {
+        margin-top: 5rem;
+      }
+      &__link {
+        margin-bottom: 1.7rem;
+        margin-left: 1rem;
+      }
+      &__btns {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @media only screen and (max-width: $bp-medium) {
+          justify-content: space-around;
+        }
+      }
+      &__favorites {
+        color: var(--color-white);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 2rem;
+        width: 18rem;
+        height: 4rem;
+        border-radius: 1rem;
+        border: 0.15rem solid var(--color-primary-dark);
+        font-size: 1.3rem;
+        cursor: pointer;
+        margin-left: 1rem;
+        &__icon {
+          color: var(--color-white);
+          width: 2rem;
+          height: 2rem;
+          @media only screen and (max-width: $bp-medium) {
+            width: 1.8rem;
+          height: 1.8rem;
+          
+          }
+          margin-right: 1.3rem;
+          fill: currentColor;
+          &--link {
+            fill: var(--color-grey-dark-2);
+            width: 3rem;
+            height: 3rem;
+            @media only screen and (max-width: $bp-medium) {
+              width: 2rem;
+            height: 2rem;
+            }
+            &:hover{
+              fill: var(--color-white);
+            }
+          }
+        }
+      }
+      &__list {
+        width: 40rem;
+      //  height: 12rem;
+        font-size: 1.4rem;
+        @media only screen and (max-width: $bp-medium) {
+          font-size: 1.2rem;
+        }
+        color: var(--color-grey-dark-2);
+        //margin-bottom: 1.5rem;
+        padding-left: 1.5rem;
+        overflow: overlay; //Behaves the same as auto, but with the scrollbars drawn on top of content instead of taking up space.
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+  
+        &::-webkit-scrollbar {
+          // to hide the scrollbar for chrome, safari, and safari
+          display: none;
+        }
+      }
+    }
+  }

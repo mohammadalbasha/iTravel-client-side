@@ -1,0 +1,110 @@
+:root {
+  //root pseudo class the same as the html selector but with higher specificity
+  // so here we will put all of our variables which will be accessible throught the entire document
+  //and they will be available to all children
+  //******************CSS VARIABLES(Custom CSS properties)**********************///
+  --color-primary: #4fba6f;
+  --color-primary-light: #36c860; //
+  --color-primary-dark: #2ba04c; //238E00
+  --color-primary-dark-2: #06250f; //238E00
+
+
+  --color-secondary: #f40000;
+
+  --color-grey-light-1: #faf9f9;
+  --color-grey-light-2: #f4f2f2;
+  --color-grey-light-3: #f0eeee;
+  --color-grey-light-4: #ccc;
+
+  --color-grey-dark-1: #333;
+  --color-grey-dark-2: #777;
+  --color-grey-dark-3: #999;
+
+  --color-layout-2: #142f36;
+  --color-layout: #435651;
+  --color-black: #000;
+  --color-white: #fff;
+
+  --color-shadow-dark: rgba(0, 0, 0, 0.3);
+
+  --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
+  --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+
+  --line: 1px solid var(--color-grey-light-2);
+}
+//Variables for the media queries (NOTE: only work if the vaiables are defined as SASS variables not css variables)
+///$bp-largest: 75em; // largest breakpoint : 1200px
+//$bp-medium: 56.25em; //900px -> 900 / 16 = 56.25
+//$bp-small: 37.5em; //600px -> 600 / 16 = 37.5
+//$bp-smallest: 31.25rem; // 500px
+
+$bp-larger: 68.75em; //1100px
+$bp-large: 56.25rem; //900px -> 900 / 16 = 56.25
+$bp-medium: 47.875rem;
+$bp-small: 40rem;
+
+//*****************GLOBAL SETTINGS***************************//
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; //everything inherit this property all elements and  after/before pseudo elements
+}
+
+::selection {
+  background-color: var(--color-primary-dark);
+  color: #fff;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // that means now 1rem = 10px, and that is because 10px(our target) / 16px (browser default) = 62.5%
+
+  @media only screen and (max-width: $bp-larger) {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: "Open Sans", sans-serif; //Open Sans is the font that we gonna use in case it fails to load we use the sans-serif
+  font-weight: 300;
+  line-height: 1.6;
+  color: var(--color-grey-dark-2);
+  background-image: linear-gradient(
+    to right bottom,
+    var(--color-grey-light-4),
+    var(--color-grey-dark-3)
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  color: #fff;
+  font-size: 240%;
+  word-spacing: 4px;
+  letter-spacing: 1px;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+main {
+  height:auto;
+}

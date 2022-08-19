@@ -1,0 +1,168 @@
+@import '../../index.scss';
+.myAccount {
+  height: 120vh;
+  @media only screen and (max-width: $bp-medium) {
+    height: 150vh;
+  }
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+    url(../../images/myAccount.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  &__header {
+    display: flex;
+    align-items: center;
+    padding: 1rem 0 1rem 0;
+    border-bottom: 1px solid var(--color-primary-dark);
+    margin-bottom: 3rem;
+    margin-top: 10rem;
+    @media only screen and (max-width: $bp-medium) {
+      margin-top: 13rem;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    &__user-image {
+      height: 10rem;
+      border-radius: 50%;
+      margin-right: 2rem;
+      border: 0.1rem solid var(--color-primary-dark);
+    }
+    &__user-button {
+      width: 0.1px;
+      height: 0.1px;
+      opacity: 0;
+      overflow: hidden;
+      position: absolute;
+      z-index: -1;
+      &__label {
+        font-size: 1.5em;
+        font-weight: 700;
+        color: var(--color-white);
+        text-decoration: underline;
+        display: inline-block;
+        cursor: pointer;
+        &:focus,
+        &:hover,
+        &:active {
+          color: var(--color-primary-dark);
+          fill: currentColor;
+        }
+        &__icon {
+          width: 1.3rem;
+          height: 1.3rem;
+          margin-left: 0.5rem;
+          color: var(--color-white);
+          fill: currentColor;
+          &:hover {
+            color: var(--color-primary-dark);
+            fill: currentColor;
+          }
+        }
+      }
+    }
+    &__userDetails {
+      margin-left: 30rem;
+      font-size: 2rem;
+      color: var(--color-white);
+      display: flex;
+      flex-direction: column;
+      @media only screen and (max-width: $bp-medium) {
+        margin-left: 0;
+        margin-top: 3rem;
+      }
+      &__group {
+        font-weight: 300;
+        margin-bottom: 1rem;
+      }
+      &__info {
+        margin-right: 1.5rem;
+        font-weight: 600;
+        color: var(--color-primary-dark);
+      }
+    }
+  }
+
+  &__form {
+    font-size: 1.6rem;
+    padding: 2.5rem 2.5rem 0 2.5rem;
+    color: var(--color-white);
+    display: grid;
+    width: 72vw;
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+    grid-column-gap: 3rem;
+    border-radius: 1rem;
+    background: rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    margin-bottom: 3rem;
+    
+    &__group {
+      display: flex;
+      align-items: center;
+      margin-bottom: 2.5rem;
+    }
+    &__label {
+      width: 14rem;
+    }
+    &__input {
+      font-family: inherit;
+      font-size: inherit;
+      color: var(--color-grey-light-4);
+      background-color: rgba(0, 0, 0, 0.5);
+      border: none;
+      padding: 0.7rem 2rem;
+      border-radius: 100px;
+      box-shadow: 0 0 0 0.5px var(--color-grey-light-4);
+      transition: all 0.5s ease;
+      width: 25rem;
+      &:focus {
+        width: 27rem;
+        outline: none;
+        box-shadow: 0 0 0 0.5px var(--color-primary);
+      }
+    }
+  }
+  &__request {
+    color: var(--color-primary-dark);
+    margin-top: 1rem;
+    font-size: 1.2rem;
+  }
+  &__btn {
+    font-size: 1.4rem;
+    padding: 1.1rem 3rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-radius: 20rem;
+    border: 1px solid var(--color-primary-dark);
+    background-color: var(--color-primary-dark);
+    color: var(--color-white);
+    cursor: pointer;
+    &:hover{
+      background-color: var(--color-primary);
+      transition: all .2s;
+    }
+    &--empty{
+      margin: 0 1.5rem;
+      background-color: transparent;
+    }
+  }
+}
+
+.edit-pen-button {
+  margin-left: 1rem;
+  height: 2rem;
+  width: 2rem;
+  color: var(--color-primary-dark);
+  fill: currentColor;
+  &:active,
+  &:hover,
+  &focus {
+    color: var(--color-primary);
+    fill: currentColor;
+  }
+}

@@ -1,0 +1,33 @@
+.homePage {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  &__image {
+    height: 28rem;
+    @media only screen and (max-width: 40rem) {
+      height: 35rem;
+      width: 19rem;
+    }
+  }
+  &__body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    &__paragraph {
+      font-size: 1.8rem;
+      width: 50vw;
+      margin-bottom: 1rem;
+    }
+
+    &__list {
+      margin-left: 3rem;
+      font-size: 1.3rem;
+      width: 50vw;
+      &__item {
+        margin-top: 1rem;
+      }
+    }
+  }
+}

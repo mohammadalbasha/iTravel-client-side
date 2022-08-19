@@ -1,0 +1,124 @@
+.addTourPlan {
+  display: flex;
+  align-items: center;
+  width: inherit; // must be deleted by yasser
+  // background styles moved to page class, look below ||
+  &__header {
+    font-size: 3rem;
+    border-bottom: 0.2rem solid var(--color-white);
+    font-family: Georgia, "Times New Roman", Times, serif;
+    margin-bottom: 2rem;
+  }
+  &__form {
+    border-radius: 1rem;
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    padding-top: 5rem;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    //margin: 5vw 17.5vw;  
+    margin: 5% 17.5%;
+    //margin-left: 20vw;
+    width: 100%; // must be deleted by yasser
+    //  padding: 0 1rem 0 5rem;
+  
+
+  &__body {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    &__sectionTitle {
+      border-bottom: 0.1rem solid var(--color-white);
+      margin-left: 5rem;
+      font-size: 1.6rem;
+      font-family: Georgia, "Times New Roman", Times, serif;
+      margin-top: 3rem;
+    }
+    &__section {
+      //width: 65vw; by yasser
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+      grid-column-gap: 0;
+     // padding: 0 1rem 0 5rem; //by yasser
+      margin-top: 1rem;
+    }
+    &__group {
+      display: flex;
+      align-items: center;
+      margin-top: 2rem;
+      font-family: Georgia, "Times New Roman", Times, serif;
+    }
+    &__input {
+      width: 20rem;
+      font-family: inherit;
+      color: #fff;
+      background-color: rgba(0, 0, 0, 0.5);
+      outline: none;
+      border: none;
+      padding: 1.3rem 2rem;
+      font-size: 13px;
+      border-radius: 30px;
+      box-shadow: 0 0 0 0.5px var(--color-grey-light-4);
+      transition: box-shadow 0.5s ease;
+      &::-webkit-calendar-picker-indicator { //to color calender icon
+        filter: invert(1);
+      }
+      &--description {
+        // min-height: 17rem;
+        // max-height: 17rem; by yasser
+        min-height: 10rem;
+        min-width: 40vw;
+        // max-width: 46vw; by yasser
+        // moved to page 
+        min-width: 100%;
+       // max-width: 100%;
+
+        border-radius: 20px;
+      }
+
+      &:focus {
+        outline: none;
+        box-shadow: 0 0 0 0.5px var(--color-primary);
+      }
+
+      &:focus:invalid {
+        box-shadow: 0 0 0 0.5px var(--color-secondary);
+      }
+    }
+
+    &__label {
+      font-size: 1.5rem;
+      font-weight: 300;
+      margin-right: 1rem;
+      width: 13rem;
+    }
+    &__span {
+      margin-left: 2rem;
+      width: 25rem;
+      font-size: 1.2rem;
+    }
+  }
+  &--btn {
+    margin: 3.5rem 0 2rem 0;
+    font-family: Georgia, "Times New Roman", Times, serif;
+  }
+  &__request {
+    color: var(--color-primary-dark);
+    margin: 1.5rem 0;
+    font-size: 1.2rem;
+  }
+}
+.page { // these class properties must be in addTourPlan according to Yasser
+  background-size: cover;
+  background-attachment: fixed;
+  background-image: linear-gradient(rgba(246, 100, 100, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../../images/addTourPlan.jpg);
+  .addTourPlan__form__input--description{
+    min-width: 40vw;
+    max-width: 46vw;
+  }
+    
+}

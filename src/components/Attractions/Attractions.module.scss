@@ -1,0 +1,35 @@
+@import "../../index.scss";
+.attractions__header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 7rem;
+
+  &__title {
+    font-size: 3rem;
+    @media only screen and (max-width: $bp-small) {
+      font-size: 2rem;
+    }
+    font-family: Georgia, "Times New Roman", Times, serif;
+    border-bottom: 0.2rem solid var(--color-primary);
+    margin: 1.7rem 0;
+  }
+}
+.attractions__search {
+  margin-top: 4rem;
+  &__paragraph {
+    margin-left: 5rem;
+    font-size: 2.1rem;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    width: fit-content;
+    border-bottom: 0.1rem solid var(--color-grey-dark-2);
+  }
+}
+.attractions {
+  grid-column: center-start / center-end;
+  margin: 3rem 5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+  grid-gap: 7rem;
+  margin-bottom: 10rem;
+}

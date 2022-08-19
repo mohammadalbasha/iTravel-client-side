@@ -1,0 +1,57 @@
+@import '../../index.scss';
+.selectAttractionsCategory {
+  height: 100vh; //media query here
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(../../images/selectAttractionsCategory.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  &__form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    &__label {
+      font-size: 2rem;
+      font-weight: 300;
+      margin-right: 1rem;
+      width: 17rem;
+      color: var(--color-primary-dark);
+    }
+
+    &__select {
+      width: 45rem;
+      @media only screen and (max-width: $bp-medium) {
+        width: 30rem;
+      }
+      @media only screen and (max-width: $bp-small) {
+        width: 25rem;
+      }
+      font-family: inherit;
+      color: var(--color-grey-light-3);
+      background-color: rgba(0, 0, 0, 0.5);
+      outline: none;
+      border: none;
+      padding: 1rem;
+      font-size: 1.5rem;
+      border-radius: 3rem;
+      box-shadow: 0 0 0 0.5px var(--color-primary);
+      transition: box-shadow 0.5s ease;
+      margin-right: 1.5rem;
+      &:focus {
+        outline: none;
+      }
+      &__option {
+        background: var(--color-grey-dark-1);
+        color: var(--color-white);
+      }
+    }
+  }
+  &__request {
+    color: var(--color-primary-dark);
+    font-size: 1.5rem;
+    width: 15rem;
+  }
+}

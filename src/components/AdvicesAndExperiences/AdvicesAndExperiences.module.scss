@@ -1,0 +1,145 @@
+@import "../../index.scss";
+.advicesAndExperiences {
+//  height: 100vh;
+  &__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 7rem;
+
+    &__title {
+      font-size: 3rem;
+      @media only screen and (max-width: $bp-small) {
+        font-size: 2rem;
+      }
+      font-family: Georgia, "Times New Roman", Times, serif;
+      border-bottom: 0.2rem solid var(--color-primary);
+      margin: 1.7rem 0;
+    }
+  }
+
+  &__search {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__paragraph {
+      margin-left: 5rem;
+      font-size: 2.1rem;
+      font-family: Georgia, "Times New Roman", Times, serif;
+      width: fit-content;
+      border-bottom: 0.1rem solid var(--color-grey-dark-2);
+    }
+  }
+  &__filters {
+    padding: 4rem;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 65vw;
+    margin: auto;
+    &__group {
+      display: flex;
+      align-items: center;
+      margin-top: 2rem;
+    }
+    &__label {
+      font-size: 1.6rem;
+      font-weight: 300;
+      margin-right: 0.7rem;
+      width: 13rem;
+      
+    }
+    &__input {
+      width: 20rem;
+      font-family: inherit;
+      color: rgb(51, 50, 50);
+      background-color: rgba(240, 240, 240, 0.921);
+      outline: none;
+      border: none;
+      font-size: 13px;
+      padding: 1rem 1.6rem;
+      border-radius: 30px;
+      box-shadow: 2px 1.5px 2px 0px var(--color-primary);
+      transition: box-shadow 0.5s ease;
+
+      &:disabled { 
+        color: #b2b2b2;
+      }
+     
+    }
+    &__submit {
+      align-self: flex-end;
+      margin-top: 2rem;
+      padding: 0.7rem 1.2rem;
+      border-radius: 20px;
+      color: var(--color-grey-dark-2);
+      background-color: var(--color-grey-light-4);
+      border-color:  var(--color-grey-dark-2);
+      border-style: outset;
+      //border-style: solid;
+      border-width: 2px;
+
+      &:hover {
+        background-color: var(--color-primary);
+        border-color: var(--color-primary);
+        color: white;
+      }
+
+    }
+
+  }
+  &__list {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 60vw;
+ //   height: 65vh;
+    margin-left: 20vw;
+    overflow: overlay; //Behaves the same as auto, but with the scrollbars drawn on top of content instead of taking up space.
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+
+    &::-webkit-scrollbar {
+      // to hide the scrollbar for chrome, safari, and safari
+      display: none;
+    }
+    &__item {
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      flex-direction: column;
+      padding: 1rem 3rem;
+      width: 100%;
+      //border: 1px solid var(--color-primary-dark);
+      margin-top: 2rem;
+      border-radius: 2rem;
+      box-shadow: 0px 2px 2px #8888;
+      &:nth-child(odd) {
+        background-color: var(--color-grey-light-4);
+      }
+      &:nth-child(even) {
+        background-color: #b2b2b2;
+      }
+
+      &__details {
+        font-size: 1.5rem;
+        color: var(--color-grey-dark-2);
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+
+        &__group {
+          margin-bottom: 0.4rem;
+        }
+        &__info {
+          margin-right: 1.5rem;
+          font-weight: 600;
+          color: var(--color-primary-dark);
+        }
+      }
+    }
+  }
+}
